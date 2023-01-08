@@ -1,0 +1,33 @@
+<h1>{{characters?.info?.count}} Rick and Morty Characters were found </h1>
+<h2>Page: {{actPage}}</h2>
+<input [(ngModel)]="searchInput"><button (click)="searchCharacter()">Search</button><button
+  (click)="clearSearch()">Clear</button>
+<table>
+  <th>
+    Name
+  </th>
+  <th>
+    Gender
+  </th>
+  <th>
+    Species
+  </th>
+  <th>
+    Status
+  </th>
+  <tr *ngFor="let char of characters?.results, index as i">
+    <td>{{char.name}}</td>
+    <td>{{char.gender}}</td>
+    <td>{{char.species}}</td>
+    <td>{{char.status}}</td>
+  </tr>
+  <tr>
+    <td> <button (click)=" loadCharactersAt(characters?.info?.prev)">Previous Page</button>
+    </td>
+    <td></td>
+    <td></td>
+    <td>
+      <button (click)=" loadCharactersAt(characters?.info?.next)">Next Page</button>
+    </td>
+  </tr>
+</table>
