@@ -53,4 +53,9 @@ export class PonyDataService {
       `https://rickandmortyapi.com/api/character/${query}`
     );
   }
+  public loadCharacterById(charId: number): Observable<Result> {
+    return this.http.get<Result>(
+      `https://rickandmortyapi.com/api/character/${charId}`
+    );
+  }
 }

@@ -15,7 +15,7 @@
   <th>
     Status
   </th>
-  <tr *ngFor="let char of characters?.results, index as i">
+  <tr (click)="detailsViewCharacter(char.id)" *ngFor="let char of characters?.results, index as i">
     <td>{{char.name}}</td>
     <td>{{char.gender}}</td>
     <td>{{char.species}}</td>

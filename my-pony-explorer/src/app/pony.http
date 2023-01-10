@@ -1,3 +1,5 @@
-GET http://ponyweb.ml/v1/character/all
+GET https://rickandmortyapi.com/api/character
 
+###
 
+GET https://rickandmortyapi.com/api/character/1
